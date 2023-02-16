@@ -1,0 +1,2 @@
+#!/bin/baah
+gcc -S -masm=intel $CFILE
