@@ -5,7 +5,7 @@
 /**
 * listint_len - Returns the number of elements in a linked list.
 *
-* @h: pointer to the head node of the linked list.
+* @h: A pointer to the head of the linked list.
 *
 * Returns: number of nodes in the linked list.
 */
@@ -20,7 +20,7 @@ while (current)
 
 {
 node_count++;
-h = h->next;
+current = current->next;
 }
 
 return (node_count);
