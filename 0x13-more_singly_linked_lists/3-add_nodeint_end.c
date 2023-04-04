@@ -22,7 +22,7 @@ new_node->n = n;
 new_node->next = NULL;
 
 if (*head == NULL)
-*head == new_node;
+*head = new_node;
 
 else
 {
@@ -30,7 +30,7 @@ listint_t *last1_node = *head;
 while (last1_node->next != NULL)
 last1_node = last1_node->next;
 
-last1_node = new_node;
+last1_node->next = new_node;
 
 }
 return (new_node);
