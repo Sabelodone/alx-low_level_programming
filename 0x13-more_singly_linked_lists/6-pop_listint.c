@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -7,11 +6,10 @@
 *
 *@head: a pointer that points to a pointer.
 *
-*Returns: head node data (n) or 0 if the linked list is empty.
+*Return: head node data (n) or 0 if the linked list is empty.
 */
 
 int pop_listint(listint_t **head)
-
 {
 
 int node_data;
