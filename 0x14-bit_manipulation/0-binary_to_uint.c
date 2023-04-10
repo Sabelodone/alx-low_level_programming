@@ -2,13 +2,13 @@
 #include <string.h>
 
 /**
- *binary_to_uint - it converts binary number and make it unsigned int.
- *
- *@b:is a pointer to a string of 0 and 1 chars.
- *
- *Return: the decimal value.
- *
- */
+*binary_to_uint - it converts binary number and make it unsigned int.
+*
+*@b:is a pointer to a string of 0 and 1 chars.
+*
+*Return: the decimal value.
+*
+*/
 
 unsigned int binary_to_uint(const char *b)
 {
