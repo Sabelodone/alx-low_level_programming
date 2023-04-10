@@ -25,7 +25,7 @@ result = result << 1;
 if (*b == '1')
 result = result | 1;
 b++;
-
+}
 return (result);
 }
-}
+
