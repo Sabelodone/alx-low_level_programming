@@ -3,9 +3,9 @@
 #include "main.h"
 
 /**
-*binary_to_uint - it converts binary number and make it unsigned int.
+*binary_to_uint - Converts binary number and make it unsigned int.
 *
-*@b:is a pointer to a string of 0 and 1 chars.
+*@b: A pointer to a string of 0 and 1 chars.
 *
 *Return: the decimal value.
 *
@@ -35,4 +35,3 @@ b++;
 return (result);
 
 }
-
