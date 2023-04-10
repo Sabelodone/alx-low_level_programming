@@ -1,20 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
 *print_binary -prints the binary representation of a number.
-*_putchar - writes a character to stdout
+*
 *@n: the number to the print.
 *
 *Return: void.
 */
 
-int _putchar(char n);
+int _putchar(char c);
 void print_binary(unsigned long int n)
 {
 int j;
-while (n > 1)
+if (n > 1)
 {
 
 print_binary(n >> 1);
@@ -29,7 +28,14 @@ _putchar('1');
 else
 _putchar('0');
 }
-int _putchar(char n)
+
+/**
+ *_putchar - Writes a characteer to stdout.
+ *This function writes a character to stdout.
+ *@c: the character to write
+ *Return: the character written,or E0f if an error occured
+ */
+int _putchar(char c)
 {
-return (putchar(n));
+return (putchar(c));
 }
