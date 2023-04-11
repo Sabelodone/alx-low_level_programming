@@ -1,14 +1,14 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-*print_file - Reads a file and prints its contents to the POSIX stdout.
+*read_textfile - Reads a file and prints its contents to the POSIX stdout.
 *@filename: the name of the file to read.
 *@letters: the maximum number of bytes to read and print.
 *
 *Return: the maximum number of bytesprinted, or 0 on failure.
 */
 
-ssize_t print_file(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 
 {
 
