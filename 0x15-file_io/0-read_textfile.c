@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
+#include "main.h"
 /**
  *print_file - reads a file and prints its contents to the standard output.
  *@filename: the name of the file to read.
