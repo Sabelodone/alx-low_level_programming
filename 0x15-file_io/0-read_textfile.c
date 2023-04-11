@@ -1,0 +1,56 @@
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+/**
+ *print_file - reads a file and prints its contents to the standard output.
+ *@filename: the name of the file to read.
+ *@max_bytes: the maximum number of bytes to read and print.
+ *
+ *Return: the number of bytes printed,or 0 on failure.
+ */
+
+ssize_t print_file(const char *filename, size_t max_bytes)
+
+{
+
+if (filename == NULL)
+return (0);
+
+int fd = open(filename, O_RDONLY);
+if (fd == -1)
+return (0);
+
+char *buffer = malloc(max_bytes * sizeof(char));
+if (buffer == NULL)
+
+{
+close(fd);
+return (0);
+}
+
+ssize_t bytes_read = read(fd, buffer, max_bytes);
+if (bytes_read == -1)
+{
+
+free(buffer);
+close(fd);
+return (0);
+
+}
+
+ssize_t bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+if (bytes_written == -1 || bytes_written != bytes_read)
+{
+
+free(buffer);
+close(fd);
+return (0);
+}
+
+free(buffer);
+close(fd);
+return (bytes_written);
+}
