@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include <fcntl.h>
+#include <unistd.h>
 /**
 *read_textfile - Reads a file and prints its contents to the POSIX stdout.
 *@filename: the name of the file to read.
@@ -14,13 +16,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 
 if (filename == NULL)
-return (0);
+return (-1);
 
 int fd = open(filename, O_RDONLY);
 if (fd == -1)
-return (0);
+return (-1);
 
-char *buffer = malloc(letters * sizeof(char));
+char *buffer = malloc((letters + 1) * sizeof(char));
 if (buffer == NULL)
 
 {
