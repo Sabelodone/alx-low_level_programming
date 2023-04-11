@@ -7,12 +7,12 @@
 /**
  *print_file - reads a file and prints its contents to the standard output.
  *@filename: the name of the file to read.
- *@max_bytes: the maximum number of bytes to read and print.
+ *@letters: the maximum number of bytes to read and print.
  *
  *Return: the number of bytes printed,or 0 on failure.
  */
 
-ssize_t print_file(const char *filename, size_t max_bytes)
+ssize_t print_file(const char *filename, size_t letters)
 
 {
 
@@ -23,7 +23,7 @@ int fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
 
-char *buffer = malloc(max_bytes * sizeof(char));
+char *buffer = malloc(letters * sizeof(char));
 if (buffer == NULL)
 
 {
@@ -31,7 +31,7 @@ close(fd);
 return (0);
 }
 
-ssize_t bytes_read = read(fd, buffer, max_bytes);
+ssize_t bytes_read = read(fd, buffer, letters);
 if (bytes_read == -1)
 {
 
