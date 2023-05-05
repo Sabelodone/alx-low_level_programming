@@ -13,15 +13,15 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int clearer = 0;
 
-	while (index >= sizeof(unsigned long int) * 8)
+	if (index >= sizeof(unsigned long int) * 8)
 	return (-1);
 
-	for (unsigned int i = 0; i < index; i++)
-	clearer = (clearer << 1) | 1;
+	while (index > 0)
+	{
 
-	clearer = clearer << index;
-
-	clearer = ~clearer;
+		clearer |= 1 << index;
+		index--;
+	}
 
 	*n &= clearer;
 
