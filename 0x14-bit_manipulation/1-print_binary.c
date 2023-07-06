@@ -10,7 +10,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int temp = n;
+ 	long int temp = n;
 	int num_bits = 0;
 
 	if (n == 0)
@@ -25,7 +25,7 @@ void print_binary(unsigned long int n)
 		num_bits++;
 	}
 
-	while (num_bits >= 0)
+	while (num_bits > 0)
 	{
 
 	if ((n >> num_bits) & 1)
