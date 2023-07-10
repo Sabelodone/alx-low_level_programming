@@ -1,5 +1,8 @@
 #include "main.h"
 #include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 /**
  * main - coppies content of one file to another
