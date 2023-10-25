@@ -1,9 +1,9 @@
 .PHONY: all
 
-CC := gcc
-SRC := main.c school.c
+CC = gcc
+SRC = main.c school.c
 
 all: school
 
-school: $(SRC)
-	$(CC) -o $@ $^
+school:
+	${CC} -o $@ ${SRC}
