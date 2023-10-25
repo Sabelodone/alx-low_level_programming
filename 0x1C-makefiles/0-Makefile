@@ -1,0 +1,9 @@
+.PHONY: all
+
+CC := gcc
+CFLAGS := -Wall -Werror -Wextra -pedantic
+
+all: school
+
+school: main.c school.c
+	$(CC) $(CFLAGS) -o school $^
